@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Penguin Slide</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<section id="menu" class="screen active">
+  <div class="aurora"></div>
+  <div class="menu-card">
+    <div class="penguin-logo">🐧</div>
+    <div class="eyebrow">ARCTIC RUN</div>
+    <h1>PENGUIN<br><span>SLIDE</span></h1>
+    <p>Deslize pela neve, faça curvas suaves e tente chegar o mais longe possível.</p>
+    <button id="play">JOGAR</button>
+    <div class="record">🏆 RECORDE <b id="menuRecord">0 m</b></div>
+  </div>
+  <div class="tip">← → ou A / D para controlar</div>
+</section>
+
+<section id="game" class="screen">
+  <canvas id="canvas"></canvas>
+  <div class="hud">
+    <div class="hudBox"><small>DISTÂNCIA</small><b id="distance">0 m</b></div>
+    <div class="timer" id="timer">00:00</div>
+    <div class="hudBox"><small>PEIXES</small><b id="fish">0</b></div>
+  </div>
+  <div class="speed"><span>VELOCIDADE</span><div><i id="speedBar"></i></div></div>
+  <div class="mobileControls"><button id="left">‹</button><button id="right">›</button></div>
+  <div id="near" class="near">NEAR MISS!</div>
+</section>
+
+<section id="over" class="screen">
+  <div class="over-card">
+    <div class="over-penguin">🐧</div>
+    <div class="eyebrow">FIM DA DESCIDA</div>
+    <h2>VOCÊ CAIU!</h2>
+    <div class="stats">
+      <div><small>DISTÂNCIA</small><b id="finalDistance">0 m</b></div>
+      <div><small>TEMPO</small><b id="finalTime">00:00</b></div>
+      <div><small>PEIXES</small><b id="finalFish">0</b></div>
+    </div>
+    <div id="newRecord" class="newRecord">🏆 NOVO RECORDE!</div>
+    <button id="again">TENTAR NOVAMENTE</button>
+    <button id="back" class="ghost">MENU</button>
+  </div>
+</section>
+<script src="game.js"></script>
+</body>
+</html>
